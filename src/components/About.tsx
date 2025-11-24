@@ -1,22 +1,22 @@
-import { Code2, Palette, Rocket, Users } from "lucide-react";
+import { Palette, Layout, Server, Database } from "lucide-react";
 import { Card } from "@/components/ui/card";
 export function About() {
   const highlights = [{
-    icon: Code2,
-    title: "Clean Code",
-    description: "Código limpo, mantível e escalável"
-  }, {
     icon: Palette,
     title: "UI/UX Design",
     description: "Interfaces intuitivas e responsivas"
   }, {
-    icon: Rocket,
-    title: "Performance",
-    description: "Otimização e alta performance"
+    icon: Layout,
+    title: "Frontend",
+    description: "Desenvolvimento de interfaces modernas e interativas"
   }, {
-    icon: Users,
-    title: "Colaboração",
-    description: "Trabalho em equipe e comunicação"
+    icon: Server,
+    title: "Backend",
+    description: "Arquitetura de APIs e sistemas robustos"
+  }, {
+    icon: Database,
+    title: "Database",
+    description: "Modelagem e gestão de bancos de dados"
   }];
   return <section id="about" className="py-24 px-4">
       <div className="max-w-6xl mx-auto">
