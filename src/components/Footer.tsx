@@ -9,7 +9,7 @@ export function Footer() {
       <div className="max-w-6xl mx-auto">
         <div className="flex flex-col items-center gap-8">
           {/* Logo/Assinatura */}
-          <div className="w-full max-w-md">
+          <div className="w-full max-w-xs">
             <img 
               src={logoSignature} 
               alt="Emerson Viana - WebDev UI/UX" 
