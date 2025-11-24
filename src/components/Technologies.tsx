@@ -50,7 +50,14 @@ export function Technologies() {
               </div>
 
               <div className="flex flex-wrap gap-2">
-                {category.techs.map((tech, i) => {})}
+                {category.techs.map((tech, i) => (
+                  <span
+                    key={i}
+                    className="px-3 py-1 bg-muted rounded-full text-sm font-medium hover:bg-accent/20 transition-colors"
+                  >
+                    {tech}
+                  </span>
+                ))}
               </div>
             </Card>)}
         </div>

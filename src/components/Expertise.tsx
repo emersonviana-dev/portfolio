@@ -1,37 +1,37 @@
 import { Card } from "@/components/ui/card";
-import { Code, Layers, Zap, Shield, RefreshCw, Users } from "lucide-react";
+import { Brain, Sparkles, Server, Cloud, HardDrive, Palette } from "lucide-react";
 
 export function Expertise() {
   const expertiseAreas = [
     {
-      icon: Code,
-      title: "Desenvolvimento Full Stack",
-      description: "Experiência completa em frontend e backend, criando aplicações web robustas e escaláveis",
+      icon: Brain,
+      title: "Inteligência Artificial",
+      description: "Desenvolvimento e implementação de soluções baseadas em IA e machine learning",
     },
     {
-      icon: Layers,
-      title: "Arquitetura de Software",
-      description: "Design de sistemas escaláveis com padrões de arquitetura modernos e boas práticas",
+      icon: Sparkles,
+      title: "Engenharia de Prompt",
+      description: "Criação e otimização de prompts para modelos de linguagem e sistemas de IA",
     },
     {
-      icon: Zap,
-      title: "Otimização de Performance",
-      description: "Expertise em melhorar velocidade e eficiência de aplicações web",
+      icon: Server,
+      title: "Virtualização de Sistemas",
+      description: "Gestão de ambientes virtualizados e infraestrutura de servidores",
     },
     {
-      icon: Shield,
-      title: "Segurança",
-      description: "Implementação de práticas de segurança e proteção de dados",
+      icon: Cloud,
+      title: "Oracle Cloud",
+      description: "Implementação e gerenciamento de soluções na Oracle Cloud Infrastructure",
     },
     {
-      icon: RefreshCw,
-      title: "CI/CD & DevOps",
-      description: "Automação de deploy e integração contínua para entregas ágeis",
+      icon: HardDrive,
+      title: "Proxmox",
+      description: "Administração de clusters e virtualização com Proxmox VE",
     },
     {
-      icon: Users,
-      title: "Liderança Técnica",
-      description: "Mentoria de equipes e revisão de código para garantir qualidade",
+      icon: Palette,
+      title: "Web Design",
+      description: "Criação de interfaces modernas, responsivas e centradas no usuário",
     },
   ];
 
