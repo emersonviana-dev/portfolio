@@ -1,5 +1,6 @@
 import { Card } from "@/components/ui/card";
-import { Award, Calendar } from "lucide-react";
+import { Award, Calendar, ExternalLink } from "lucide-react";
+import { Button } from "@/components/ui/button";
 import {
   Carousel,
   CarouselContent,
@@ -15,30 +16,35 @@ export function Certificates() {
       institution: "Amazon Web Services",
       year: "2024",
       description: "Certificação em arquitetura de soluções cloud",
+      verificationUrl: "https://aws.amazon.com/verification",
     },
     {
       title: "Professional Scrum Master I",
       institution: "Scrum.org",
       year: "2023",
       description: "Metodologias ágeis e gestão de projetos",
+      verificationUrl: "https://www.scrum.org/certificates/verify",
     },
     {
       title: "React Advanced Patterns",
       institution: "Udemy",
       year: "2023",
       description: "Padrões avançados de desenvolvimento React",
+      verificationUrl: "https://www.udemy.com/certificate/verify",
     },
     {
       title: "Node.js Certified Developer",
       institution: "OpenJS Foundation",
       year: "2022",
       description: "Desenvolvimento backend com Node.js",
+      verificationUrl: "https://openjsf.org/certification/verify",
     },
     {
       title: "GraphQL API Design",
       institution: "Frontend Masters",
       year: "2022",
       description: "Design e implementação de APIs GraphQL",
+      verificationUrl: "https://frontendmasters.com/certificates/verify",
     },
   ];
 
@@ -82,9 +88,27 @@ export function Certificates() {
                         {cert.description}
                       </p>
                       
-                      <div className="flex items-center gap-2 text-sm text-accent">
-                        <Calendar className="w-4 h-4" />
-                        {cert.year}
+                      <div className="flex items-center justify-between gap-4">
+                        <div className="flex items-center gap-2 text-sm text-accent">
+                          <Calendar className="w-4 h-4" />
+                          {cert.year}
+                        </div>
+                        
+                        <Button
+                          variant="outline"
+                          size="sm"
+                          asChild
+                          className="gap-2"
+                        >
+                          <a
+                            href={cert.verificationUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            Verificar
+                            <ExternalLink className="w-3 h-3" />
+                          </a>
+                        </Button>
                       </div>
                     </div>
                   </Card>
