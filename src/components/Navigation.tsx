@@ -19,9 +19,6 @@ export function Navigation() {
     href: "#projects",
     label: "Projetos"
   }, {
-    href: "#technologies",
-    label: "Tecnologias"
-  }, {
     href: "#expertise",
     label: "Expertise"
   }, {
