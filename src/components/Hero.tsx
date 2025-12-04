@@ -22,7 +22,7 @@ export function Hero() {
 
           <div className="space-y-4 animate-fade-in-delayed">
             <h1 className="text-5xl md:text-7xl font-bold tracking-tight">
-              Desenvolvedor <span className="text-gradient">Web</span>
+              Desenvolvedor <span className="text-accent">Web</span>
             </h1>
             <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto">
               Transformando ideias em experiências digitais através de código limpo e design intuitivo
