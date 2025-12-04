@@ -48,7 +48,7 @@ export function Navigation() {
             top: 0,
             behavior: "smooth"
           });
-        }} className="text-xl font-bold text-gradient cursor-pointer">
+        }} className="text-xl font-bold text-accent cursor-pointer">
             Portfolio
           </a>
 
