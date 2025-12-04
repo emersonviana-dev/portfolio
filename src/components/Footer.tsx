@@ -12,7 +12,7 @@ export function Footer() {
 
           {/* Copyright */}
           <div className="text-center space-y-2">
-            <p className="text-muted-foreground flex items-center gap-2 justify-center">Desenvolvido por Emerson Viana<Heart className="w-4 h-4 text-accent fill-accent" /> por Desenvolvedor Full Stack
+            <p className="text-muted-foreground flex items-center gap-2 justify-center"><Heart className="w-4 h-4 text-accent fill-accent" /> 
             </p>
             <p className="text-sm text-muted-foreground">
               © {currentYear} Todos os direitos reservados.
