@@ -87,7 +87,7 @@ export function Projects() {
                   </Button>
                   <Button variant="outline" size="sm" className="border-accent/50 hover:bg-accent/10">
                     <ExternalLink className="w-4 h-4 mr-2" />
-                    Demo
+                    Ver
                   </Button>
                 </div>
               </div>

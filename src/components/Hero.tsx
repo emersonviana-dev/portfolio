@@ -1,45 +1,8 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Download, ImagePlus } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import profileImg from "@/assets/profile.jpg";
-import { useState, useEffect } from "react";
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger,
-} from "@/components/ui/dialog";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
 
 export function Hero() {
-  const [profileUrl, setProfileUrl] = useState<string>("");
-  const [tempUrl, setTempUrl] = useState<string>("");
-  const [isOpen, setIsOpen] = useState(false);
-
-  useEffect(() => {
-    const saved = localStorage.getItem("profileImageUrl");
-    if (saved) {
-      setProfileUrl(saved);
-    }
-  }, []);
-
-  const handleSaveUrl = () => {
-    if (tempUrl.trim()) {
-      localStorage.setItem("profileImageUrl", tempUrl);
-      setProfileUrl(tempUrl);
-      setIsOpen(false);
-    }
-  };
-
-  const handleReset = () => {
-    localStorage.removeItem("profileImageUrl");
-    setProfileUrl("");
-    setTempUrl("");
-    setIsOpen(false);
-  };
-
   const scrollToSection = (id: string) => {
     document.getElementById(id)?.scrollIntoView({
       behavior: "smooth"
@@ -51,49 +14,10 @@ export function Hero() {
           <div className="relative group">
             <div className="absolute inset-0 bg-gradient-to-r from-accent to-cyan-400 rounded-full blur-2xl opacity-40 group-hover:opacity-60 transition-opacity animate-float"></div>
             <img 
-              src={profileUrl || profileImg} 
+              src={profileImg} 
               alt="Profile" 
               className="relative w-48 h-48 md:w-64 md:h-64 rounded-full object-cover border-4 border-accent/20 shadow-2xl" 
             />
-            
-            <Dialog open={isOpen} onOpenChange={setIsOpen}>
-              <DialogTrigger asChild>
-                <Button
-                  size="icon"
-                  variant="secondary"
-                  className="absolute bottom-2 right-2 rounded-full shadow-lg hover:scale-110 transition-transform"
-                >
-                  <ImagePlus className="w-4 h-4" />
-                </Button>
-              </DialogTrigger>
-              <DialogContent>
-                <DialogHeader>
-                  <DialogTitle>Alterar Foto de Perfil</DialogTitle>
-                  <DialogDescription>
-                    Insira a URL da nova foto de perfil
-                  </DialogDescription>
-                </DialogHeader>
-                <div className="space-y-4 py-4">
-                  <div className="space-y-2">
-                    <Label htmlFor="imageUrl">URL da Imagem</Label>
-                    <Input
-                      id="imageUrl"
-                      placeholder="https://exemplo.com/foto.jpg"
-                      value={tempUrl}
-                      onChange={(e) => setTempUrl(e.target.value)}
-                    />
-                  </div>
-                  <div className="flex gap-2">
-                    <Button onClick={handleSaveUrl} className="flex-1">
-                      Salvar
-                    </Button>
-                    <Button onClick={handleReset} variant="outline">
-                      Restaurar Original
-                    </Button>
-                  </div>
-                </div>
-              </DialogContent>
-            </Dialog>
           </div>
 
           <div className="space-y-4 animate-fade-in-delayed">
