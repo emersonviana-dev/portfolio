@@ -54,7 +54,19 @@ export function Navigation() {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-6">
-            {navLinks.map(link => {})}
+            {navLinks.map(link => (
+              <a
+                key={link.href}
+                href={link.href}
+                onClick={e => {
+                  e.preventDefault();
+                  scrollToSection(link.href);
+                }}
+                className="text-sm font-medium hover:text-accent transition-colors cursor-pointer"
+              >
+                {link.label}
+              </a>
+            ))}
             <ThemeToggle />
           </div>
 
